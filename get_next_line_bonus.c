@@ -65,9 +65,9 @@ int	get_line(void **mem, size_t *mem_size, char **line, ssize_t count)
 	if (nl)
 	{
 		pos = nl - (char *)*mem;
-		*line = (char *) ft_memrealloc(*line, 0, pos);
+		*line = (char *)ft_memrealloc(*line, 0, pos);
 		ft_memcpy(*line, *mem, pos);
-		*mem = (char *) ft_memrealloc(*mem, *mem_size, *mem_size - pos - 1);
+		*mem = (char *)ft_memrealloc(*mem, *mem_size, *mem_size - pos - 1);
 		*mem_size = *mem_size - pos - 1;
 		return (1);
 	}

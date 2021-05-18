@@ -50,7 +50,7 @@ void	*ft_memrealloc(void *start, size_t old_size, size_t new_size)
 {
 	void	*ptr;
 
-	ptr = malloc (new_size + 1);
+	ptr = malloc(new_size + 1);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, new_size +1);
