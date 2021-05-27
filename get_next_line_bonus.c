@@ -94,16 +94,17 @@ int	get_next_line(int fd, char **line)
 	buffer = (char *)malloc(BUFFER_SIZE * sizeof(char));
 	elem = create_elem(fd, &head);
 	if (!buffer || !elem)
-		return (-1);
-	res = 0;
-	*line = NULL;
-	while (1)
 	{
+		ft_freeall(0, &buffer, fd, &head);
+		return (-1);
+	}
+	res = 2;
+	*line = NULL;
+	while (res == 2)
+	{	
 		count = read(fd, buffer, BUFFER_SIZE);
 		elem->size = ft_memcat(&elem->mem, buffer, elem->size, count);
 		res = get_line(&elem->mem, &elem->size, line, count);
-		if (res != 2)
-			break ;
 	}
 	ft_freeall(res, &buffer, fd, &head);
 	return (res);
