@@ -85,7 +85,7 @@ int	get_next_line(int fd, char **line)
 {
 	static t_list	*head = NULL;
 	t_list			*elem;
-	void			*buffer;
+    void            *buffer;
 	ssize_t			count;
 	int				res;
 
