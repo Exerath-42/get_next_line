@@ -15,5 +15,5 @@ $git clone <repository url>
 char *get_next_line(int fd);
 ```
 
-#### You can check task file
+#### You can see the task file
 [subject](en.subject.pdf)
