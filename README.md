@@ -12,6 +12,7 @@ $git clone <repository url>
 
 **Function has a prototype**
 ```
-$char *get_next_line(int fd);
+char *get_next_line(int fd);
 ```
+
 [subject](en.subject.pdf) is a task file.
